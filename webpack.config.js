@@ -5,8 +5,7 @@ module.exports = {
     output: {
         filename: 'proto.js',
         minifyFilename: 'proto.min.js',
-        sourceMapFilename: 'proto.js.map',
-        libraryTarget: 'umd',
+        sourceMapFilename: 'proto.js.map'
     },
     module: {
         loaders: [
