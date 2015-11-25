@@ -12,10 +12,8 @@ if (!Array.prototype.flatMap) {
         let results = [];
         for (let i = 0; i < this.length; i++) {
             let result = callback.call(context || this, this[i], i, this);
-            if (Array.isArray(result))
-                results.push.apply(results, result);
-            else if (result)
-                results.push(result);
+            if (Array.isArray(result)) results.push.apply(results, result);
+            else if (result) results.push(result);
         }
         return results;
     }

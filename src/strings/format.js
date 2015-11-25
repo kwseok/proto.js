@@ -4,7 +4,7 @@ import '../arrays/isArray'
 
 if (!String.prototype.format) {
     String.prototype.format = function() {
-        return this.replace(/(''|'\{|\}'|\{(\w+)\})/g, ($0, $1, $2) => {
+        return this.replace(/(''|'\{|}'|\{(\w+)})/g, ($0, $1, $2) => {
             switch ($1) {
             case "''": return "'";
             case "'{": return '{';

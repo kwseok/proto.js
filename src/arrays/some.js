@@ -7,7 +7,7 @@ if (!Array.prototype.some) {
      * @return {boolean}
      */
     Array.prototype.some = function(callback, context) {
-        if (!$.isFunction(callback)) {
+        if (typeof callback !== 'function') {
             throw new Error(callback + " is not a function");
         }
         for (let i = 0; i < this.length; i++) {

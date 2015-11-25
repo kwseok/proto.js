@@ -7,14 +7,14 @@ if (!Array.prototype.groupBy) {
      * @return {{}}
      */
     Array.prototype.groupBy = function(callback, context) {
-        if (!$.isFunction(callback)) {
+        if (typeof callback !== 'function') {
             throw new Error(callback + " is not a function");
         }
         let result = {};
         for (let i = 0; i < this.length; i++) {
             let value = this[i];
             let key = callback.call(context || this, value, i, this);
-            if (key) {
+            if (key != null) {
                 if (key in result)
                     result[key].push(value);
                 else
