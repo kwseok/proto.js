@@ -1,6 +1,6 @@
 {
   "name": "proto.js",
-  "version": "0.2.1-SNAPSHOT",
+  "version": "0.2.1",
   "description": "JavaScript Prototypes",
   "main": "dist/proto.js",
   "scripts": {
