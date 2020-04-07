@@ -17,8 +17,8 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /(node_modules|bower_components)/,
         options: {
-          presets: ['es2015'],
-          plugins: ['transform-runtime']
+          presets: ['@babel/preset-env'],
+          plugins: ['@babel/plugin-transform-runtime']
         },
       },
     ],
